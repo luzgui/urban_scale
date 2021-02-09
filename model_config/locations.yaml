@@ -8,9 +8,9 @@ locations:
                 costs.monetary.energy_cap: 100 # cost of transformers
             supply_gas:
             demand_electricity:
-                constraints.resource: file=demand_power.csv
+                constraints.resource: file=demand_power_v2.csv
             demand_heat:
-                constraints.resource: file=demand_heat.csv
+                constraints.resource: file=demand_heat_v2.csv
         available_area: 500
         coordinates: {x: 2, y: 7}
     # X1-end
@@ -25,9 +25,9 @@ locations:
                         export: -0.0491 # FIT return for PV export
             supply_gas:
             demand_electricity:
-                constraints.resource: file=demand_power.csv
+                constraints.resource: file=demand_power_v2.csv
             demand_heat:
-                constraints.resource: file=demand_heat.csv
+                constraints.resource: file=demand_heat_v2.csv
         available_area: 1300
         coordinates: {x: 8, y: 7}
 
@@ -42,9 +42,9 @@ locations:
                         om_annual: -80.5 # reimbursement per kWp from FIT
             supply_gas:
             demand_electricity:
-                constraints.resource: file=demand_power.csv
+                constraints.resource: file=demand_power_v2.csv
             demand_heat:
-                constraints.resource: file=demand_heat.csv
+                constraints.resource: file=demand_heat_v2.csv
         available_area: 900
         coordinates: {x: 5, y: 3}
     X4:
@@ -55,9 +55,9 @@ locations:
                 costs.monetary.energy_cap: 100 # cost of transformers
             supply_gas:
             demand_electricity:
-                constraints.resource: file=demand_power.csv
+                constraints.resource: file=demand_power_v2.csv
             demand_heat:
-                constraints.resource: file=demand_heat.csv
+                constraints.resource: file=demand_heat_v2.csv
         available_area: 500
         coordinates: {x: 2, y: 7}
     # X1-end
@@ -72,9 +72,9 @@ locations:
                         export: -0.0491 # FIT return for PV export
             supply_gas:
             demand_electricity:
-                constraints.resource: file=demand_power.csv
+                constraints.resource: file=demand_power_v2.csv
             demand_heat:
-                constraints.resource: file=demand_heat.csv
+                constraints.resource: file=demand_heat_v2.csv
         available_area: 1300
         coordinates: {x: 8, y: 7}
 
@@ -89,9 +89,9 @@ locations:
                         om_annual: -80.5 # reimbursement per kWp from FIT
             supply_gas:
             demand_electricity:
-                constraints.resource: file=demand_power.csv
+                constraints.resource: file=demand_power_v2.csv
             demand_heat:
-                constraints.resource: file=demand_heat.csv
+                constraints.resource: file=demand_heat_v2.csv
         available_area: 900
         coordinates: {x: 5, y: 3}
         
