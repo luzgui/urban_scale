@@ -37,12 +37,24 @@ overrides:
             X2.coordinates: {lat: 51.4652373, lon: -0.1141548}
             X3.coordinates: {lat: 51.4287016, lon: -0.1310635}
             N1.coordinates: {lat: 51.4450766, lon: -0.1247183}
+            
+            X4.coordinates: {lat: 51.4596158, lon: -0.1613446}
+            X5.coordinates: {lat: 51.4652373, lon: -0.1141548}
+            X6.coordinates: {lat: 51.4287016, lon: -0.1310635}
+            N2.coordinates: {lat: 51.4450766, lon: -0.1247183}
         links:
             X1,X2.techs.power_lines.distance: 10
             X1,X3.techs.power_lines.distance: 5
             X1,N1.techs.heat_pipes.distance: 3
             N1,X2.techs.heat_pipes.distance: 3
             N1,X3.techs.heat_pipes.distance: 4
+            
+            X4,X5.techs.power_lines.distance: 10
+            X4,X6.techs.power_lines.distance: 5
+            X4,N2.techs.heat_pipes.distance: 3
+            N2,X2.techs.heat_pipes.distance: 3
+            N2,X3.techs.heat_pipes.distance: 4
+            N1,N2.techs.heat_pipes.distance: 0
 
     operate:
         run.mode: operate
@@ -70,12 +82,37 @@ overrides:
                     pv.constraints.energy_cap_max: 50
                     supply_gas.constraints.energy_cap_max: 0
 
+            X4:
+                techs:
+                    chp.constraints.energy_cap_max: 300
+                    pv.constraints.energy_cap_max: 0
+                    supply_grid_power.constraints.energy_cap_max: 40
+                    supply_gas.constraints.energy_cap_max: 700
+
+            X5:
+                techs:
+                    boiler.constraints.energy_cap_max: 200
+                    pv.constraints.energy_cap_max: 70
+                    supply_gas.constraints.energy_cap_max: 250
+
+            X6:
+                techs:
+                    boiler.constraints.energy_cap_max: 0
+                    pv.constraints.energy_cap_max: 50
+                    supply_gas.constraints.energy_cap_max: 0
+
         links:
             X1,X2.techs.power_lines.constraints.energy_cap_max: 300
             X1,X3.techs.power_lines.constraints.energy_cap_max: 60
             X1,N1.techs.heat_pipes.constraints.energy_cap_max: 300
             N1,X2.techs.heat_pipes.constraints.energy_cap_max: 250
             N1,X3.techs.heat_pipes.constraints.energy_cap_max: 320
+            
+            X4,X5.techs.power_lines.constraints.energy_cap_max: 300
+            X4,X6.techs.power_lines.constraints.energy_cap_max: 60
+            X4,N2.techs.heat_pipes.constraints.energy_cap_max: 300
+            N2,X5.techs.heat_pipes.constraints.energy_cap_max: 250
+            N2,X6.techs.heat_pipes.constraints.energy_cap_max: 320
 
     time_masking:
         model.name: 'Urban-scale example model with time masking'
