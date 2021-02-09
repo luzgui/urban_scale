@@ -58,7 +58,7 @@ techs:
             parent: supply_power_plus
         constraints:
             export_carrier: electricity
-            resource: file=pv_resource_v2.csv:per_area  # Already accounts for panel efficiency - kWh/m2. Source: Renewables.ninja Solar PV Power - Version: 1.1 - License: https://creativecommons.org/licenses/by-nc/4.0/ - Reference: https://doi.org/10.1016/j.energy.2016.08.060
+            resource: file=pv_resource_v3.csv:per_area  # Already accounts for panel efficiency - kWh/m2. Source: Renewables.ninja Solar PV Power - Version: 1.1 - License: https://creativecommons.org/licenses/by-nc/4.0/ - Reference: https://doi.org/10.1016/j.energy.2016.08.060
             resource_unit: energy_per_area
             parasitic_eff: 0.85 # inverter losses
             energy_cap_max: 250
@@ -113,7 +113,7 @@ techs:
                 interest_rate: 0.10
                 energy_cap: 750
                 om_prod: 0.004  # .4p/kWh for 4500 operating hours/year
-                export: file=export_power_v2.csv
+                export: file=export_power_v3.csv
     # chp-end
 
 ##-DEMAND-##
